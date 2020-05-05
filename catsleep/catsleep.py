@@ -6,6 +6,7 @@ import time
 
 sys.path.append('..')
 from catsleep.utils import Utility
+from catsleep.config import Config
 
 
 class CatSleep():
@@ -45,17 +46,31 @@ class CatSleep():
         """ A method to control the interval and frequency of alarm """
         while True:
             try:
-                for alarm in range(frequency):
+                # try to get configurations
+                conf = Config()
+                configs = conf.get_user_config()
+
+                for alarm in range(configs['frequency']):
+                    #check if beep playing is set as true or not
                     #first play a beep sound, different beep at different time, need to make dynamic
-                    self.play_beep()
+                    if configs['play_beep'].lower() == "yes":
+                        self.play_beep()
+                    
+                    #check if showing text is set as true or not
                     #then display the text notification, different text at different time, need to make dynamic
-                    self.display_notification("Take Break!", "Hey! you should take a break.")
+                    if configs['show_text'].lower() == "yes":
+                        self.display_notification("Take Break!", "Hey! you should take a break.")
+                    
+                    #check if playing audio message is set as true or not
                     #then play a voice message, different message at different time, need to make dynamic
-                    self.play_audio("./catsleep/audio/take_break_audio_1.wav")
-                    time.sleep(frequency_interval)
+                    if configs['play_audio'].lower() == "yes":
+                        self.play_audio("./catsleep/audio/take_break_audio_1.wav")
+                    time.sleep(configs['frequency_interval'])
+
+                #wait for certain period before next alarm
+                time.sleep(configs['interval'])
             except Exception as e:
                 self.util.show_text("Error!", "Something went wrong!")
-            time.sleep(time_interval)
 
 
 
