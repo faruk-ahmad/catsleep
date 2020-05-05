@@ -42,7 +42,7 @@ class CatSleep():
             self.util.show_text("Error!", "Something went wrong with the text notification!")
 
     
-    def catsleep_control(self, time_interval, frequency, frequency_interval):
+    def catsleep_control(self):
         """ A method to control the interval and frequency of alarm """
         while True:
             try:
@@ -77,4 +77,4 @@ class CatSleep():
 
 if __name__ == '__main__':
     catsleep = CatSleep()
-    catsleep.catsleep_control(20, 3, 3)
+    catsleep.catsleep_control()
