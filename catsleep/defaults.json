@@ -1,0 +1,8 @@
+{
+    "interval": 30,
+    "frequency": 1,
+    "frequency_interval": 2,
+    "play_audio": "yes",
+    "show_text": "yes",
+    "play_beep": "yes"
+}
