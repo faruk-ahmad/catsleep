@@ -16,7 +16,11 @@ __catsleep__ is a tool for people working long hours in computer specially, prog
 --------------------------------------------------
 
 ## Installation
-
+```bash
+git clone https://github.com/faruk-ahmad/catsleep
+cd catsleep
+bash install.sh
+```
 --------------------------------------------------
 
 ## Configuring your catsleep
