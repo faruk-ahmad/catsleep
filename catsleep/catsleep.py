@@ -17,7 +17,7 @@ class CatSleep():
     def __init__(self):
         """ Initialize all the basic attributes required for catsleep """
         if DEBUG:
-            print(f'Initializing catsleep ...')
+            print('Initializing catsleep ...')
         self.util = Utility()
         if DEBUG:
             print('Cat Sleep is running.')
@@ -69,7 +69,7 @@ class CatSleep():
         #load the databse file for audio, text and beep sound
         data = self.load_database()
         if DEBUG:
-            print(f'Databse files: {data}')
+            print('Databse files: {data}')
 
         while True:
             try:
@@ -77,12 +77,12 @@ class CatSleep():
                 conf = Config()
                 configs = conf.get_user_config()
                 if DEBUG:
-                    print(f'voice: {configs["voice"]}')
+                    print('voice: {}'.format(configs["voice"]))
 
                 #get selected audio, text and beep for this specifi notification
                 audio_path, beep_path, text_message = self.util.select_beep_audio_text(data, configs['voice'])
                 if DEBUG:
-                    print(f'audio path: {audio_path} - beep path: {beep_path} - text message: {text_message}')
+                    print('audio path: {} - beep path: {} - text message: {}'.format(audio_path, beep_path, text_message))
                 #wait for certain period before next alarm
                 time.sleep(configs['interval'])
 
