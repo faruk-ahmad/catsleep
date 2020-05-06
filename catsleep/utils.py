@@ -26,26 +26,32 @@ class Utility():
             self.show_text("Audio file not found!")
 
 
-    def select_beep_audio_text(self, data):
+    def select_beep_audio_text(self, data, voice):
         """ A method to select a random beep, audio and respective text transcript of the selected audio """
         try:
-            audio_data = data['audio']
+            messages = data['message']
             beep_data = data['beep']
-            text_data = data['texts']
 
-            audio_index = random.randint(1, len(audio_data))
-            text_index = audio_index
             beep_index = random.randint(1, len(beep_data))
 
             root_path = './catsleep'
 
-            audio_temp_path = 'audio_' + str(audio_index)
             beep_temp_path = 'beep_' + str(beep_index)
-            text_temp_path = 'text_' + str(text_index)
 
-            audio_path = os.path.join(root_path, audio_data[audio_temp_path])
             beep_path = os.path.join(root_path, beep_data[beep_temp_path])
-            text_message = text_data[text_temp_path]
+
+            if voice.lower() != "male" and voice.lower() != "female":
+                voice_id = random.randint(1, 2)
+                if voice_id == 1:
+                    voice = "male"
+                elif voice_id == 2:
+                    voice = "female"
+
+            message = messages[voice]
+            message_index = random.randint(1, len(message))
+            audio_temp_path = message[str(message_index)]['audio']
+            audio_path = os.path.join(root_path, audio_temp_path)
+            text_message = message[str(message_index)]['text']
 
             return audio_path, beep_path, text_message
         except Exception as e:

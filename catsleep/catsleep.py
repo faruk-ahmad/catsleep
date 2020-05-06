@@ -9,7 +9,7 @@ sys.path.append('..')
 from catsleep.utils import Utility
 from catsleep.config import Config
 
-DEBUG = False
+DEBUG = True
 
 class CatSleep():
     """ A class that represents the basic operation of catsleep """
@@ -63,6 +63,7 @@ class CatSleep():
     def catsleep_control(self):
         """ A method to control the interval and frequency of alarm """
         #Show a notification that catsleep is running and will send notification for break
+        time.sleep(3)
         self.display_notification("Cat Sleep", "Cat Sleep is running and will send notification to take break.")
 
         #load the databse file for audio, text and beep sound
@@ -75,9 +76,11 @@ class CatSleep():
                 # try to get configurations
                 conf = Config()
                 configs = conf.get_user_config()
+                if DEBUG:
+                    print(f'voice: {configs["voice"]}')
 
                 #get selected audio, text and beep for this specifi notification
-                audio_path, beep_path, text_message = self.util.select_beep_audio_text(data)
+                audio_path, beep_path, text_message = self.util.select_beep_audio_text(data, configs['voice'])
                 if DEBUG:
                     print(f'audio path: {audio_path} - beep path: {beep_path} - text message: {text_message}')
                 #wait for certain period before next alarm

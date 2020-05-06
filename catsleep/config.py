@@ -14,13 +14,13 @@ class Config():
         """ Initialize all the attributes """
         path_home = expanduser("~")
         self.default_config_path = './catsleep/defaults.json'
-        self.user_config_path = os.path.join(path_home, 'catsleep_config.json')
+        self.user_config_path = os.path.join(path_home, '.catsleep_config.json')
 
     def set_user_config(self, configs):
         """ A method for creating user configuration file """
         try:
             with open(self.user_config_path, 'w') as uwf:
-                json.dump(configs, uwf)
+                json.dump(configs, uwf, indent=4)
         except Exception as e:
             print('Error in writing user configurations.' + str(e))
 

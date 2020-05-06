@@ -4,5 +4,6 @@
     "frequency_interval": 2,
     "play_audio": "yes",
     "show_text": "yes",
-    "play_beep": "yes"
+    "play_beep": "yes",
+    "voice": "random"
 }
