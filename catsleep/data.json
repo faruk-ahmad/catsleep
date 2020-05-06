@@ -21,6 +21,11 @@
             {
                 "audio": "./audio/female/take_break_audio_1.wav",
                 "text": "Hey, You should take a break."
+            },
+            "2":
+            {
+                "audio": "./audio/female/take_break_audio_2.wav",
+                "text": "Hey, Have a break and walk for a few minutes."
             }
         }
     },
