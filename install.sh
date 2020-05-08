@@ -10,3 +10,4 @@ if [ -d "$user_config_dir" ]; then
 else
     echo "$user_config_dir not exists. installation failed."
 fi
+echo "Please restart your computer to get work catsleep ..."
