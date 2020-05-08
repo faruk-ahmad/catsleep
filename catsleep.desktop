@@ -2,7 +2,7 @@
 Name=catsleep
 GenericName=work break remainder app
 Comment=Take a break to improve you productivity
-Exec=python3 /home/menon/catsleep/main.py  
+Exec=python3 catsleep/main.py  
 Terminal=false
 Type=Application
 StartupNotify=false
