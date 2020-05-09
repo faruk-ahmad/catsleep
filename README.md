@@ -3,6 +3,7 @@ A lightweight tool that reminds user to take break after a certain time period.
 
 ![CatSleep](catsleep.jpg)
 
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/faruk-ahmad/catsleep/blob/master/LICENSE)
 
 ## 1. Introduction
 
