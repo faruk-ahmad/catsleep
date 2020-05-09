@@ -3,11 +3,11 @@ A lightweight tool that reminds user to take break after a certain time period.
 
 ## 1. Introduction
 
-<div style="text-align: justify;">
+<p style="text-align: justify;">
   
-__catsleep__ is a tool for people working long hours in computer specially, programmers, software engineers and other IT professionals. Sometimes, we are so much engaged in a task that we forget to take break or have a walk that would be very harmfull to our both mental and physical health. So, we initiated this tiny effort for making a tool that would remind the person/user after a certain time to take a break, a refreshment so that s/he can concentrate to their work with a fresh mind and it would help them to keep their mental and physical health sound.
+	**catsleep** is a tool for people working long hours in computer specially, programmers, software engineers and other IT professionals. Sometimes, we are so much engaged in a task that we forget to take break or have a walk that would be very harmfull to our both mental and physical health. So, we initiated this tiny effort for making a tool that would remind the person/user after a certain time to take a break, a refreshment so that s/he can concentrate to their work with a fresh mind and it would help them to keep their mental and physical health sound.
 
-</div>
+</p>
 
 --------------------------------------------------
 
@@ -53,7 +53,7 @@ Open this file with any text editor and it looks like-
 The parameters in the configuration are as follows
 
 |   Parameter   |  Explanation   |  Possible Values | Effect | 
-|:----------|-------------|:------:|-----------|
+|:----------|-------------|------|-----------|
 | interval | Interval in between alarms/notifications, integer value given as minutes  | 1 to infininte| change the interval in alarms/notification |
 | frequency | Number of consecutive alarms/notifications in a slot  | 1 to infinite | Make multiple consecutive alarms at each alarm |
 | frequency_interval | Gap in minutes in between consecutive alarms at a time  | 1 <= value < interval | make multiple alarms after this given time |
@@ -71,8 +71,16 @@ The parameters in the configuration are as follows
 
 --------------------------------------------------
 
-## 5. ToDo Features
+## 5. Features
 --------------------------------------------------
+
+#### 5.1 Features avaiable
+
+* Notification to take break in works
+* Customization in interval, alarm frequency
+* Audio message, mode switching
+
+#### 5.2 Features in Queue
 
 * User can customize audio messages, text messages and beep sounds
 * Multiple different interval in between alarms
