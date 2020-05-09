@@ -5,6 +5,7 @@ import sys
 import os
 from os.path import expanduser
 from pathlib import Path
+import shutil
 
 class Config():
     """ A class for maintaining configurations of catsleep """
@@ -21,8 +22,7 @@ class Config():
     def set_user_config(self, configs):
         """ A method for creating user configuration file """
         try:
-            with open(self.user_config_path, 'w') as uwf:
-                json.dump(configs, uwf, indent=4)
+            shutil.copyfile(self.default_config_path, self.user_config_path)
         except Exception as e:
             print('Error in writing user configurations.' + str(e))
 
