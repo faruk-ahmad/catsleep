@@ -3,9 +3,9 @@ A lightweight tool that reminds user to take break after a certain time period.
 
 ## 1. Introduction
 
-<p style="text-align: justify;">
+<p align= "justify">
   
-	**catsleep** is a tool for people working long hours in computer specially, programmers, software engineers and other IT professionals. Sometimes, we are so much engaged in a task that we forget to take break or have a walk that would be very harmfull to our both mental and physical health. So, we initiated this tiny effort for making a tool that would remind the person/user after a certain time to take a break, a refreshment so that s/he can concentrate to their work with a fresh mind and it would help them to keep their mental and physical health sound.
+__catsleep__ is a lightweight tool for people working long hours infront of computer specially, programmers, software engineers and other IT professionals. Sometimes, we are so much engaged in a task that we forget to take break or have a walk that is very harmfull to our both mental and physical health. So, we initiated this tiny effort for making a very very simple tool that would remind the users after a certain period of time specified to take a break, a refreshment so that they can concentrate perfectly to their work with a fresh mind and it will definitely help them in either way to keep their mental and physical health sound keep growing with their enhanced productivity.
 
 </p>
 
