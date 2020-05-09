@@ -4,12 +4,13 @@ import os
 import sys
 import time
 import json
+from pathlib import Path
 
-sys.path.append('..')
-from catsleep.utils import Utility
-from catsleep.config import Config
+from .utils import Utility
+from .config import Config
 
 DEBUG = True
+DEFAULT_NOTIFY = Path(__file__).parent / "../db/default_notification.ogg"
 
 class CatSleep():
     """ A class that represents the basic operation of catsleep """
@@ -21,9 +22,10 @@ class CatSleep():
         self.util = Utility()
         if DEBUG:
             print('Cat Sleep is running.')
+        self.default_audio_path = path = Path(__file__).parent / "../db/default_notification.ogg"
 
 
-    def play_beep(self, beep_path='./catsleep/default_notification.ogg'):
+    def play_beep(self, beep_path=DEFAULT_NOTIFY):
         """ A method to play beep sound for catsleep """
         try:
             self.util.play_audio(beep_path)
@@ -31,7 +33,7 @@ class CatSleep():
             self.util.show_text("Error!", "Something went wrong with the beep notification!")
 
 
-    def play_audio(self, audio_path='./catsleep/default_notification.ogg'):
+    def play_audio(self, audio_path=DEFAULT_NOTIFY):
         """ A method to play audio for catsleep """
         try:
             self.util.play_audio(audio_path)
@@ -49,14 +51,16 @@ class CatSleep():
     
     def load_database(self):
         """ A method to load database files for audio, beep, texts from data.json file """
-        database_path = "./catsleep/data.json"
+        database_path = Path(__file__).parent / "../db/data.json"
+        if DEBUG:
+            print("database path: {}".format(database_path))
         try:
-            with open(database_path, 'r') as rf:
+            with open(str(database_path), 'r') as rf:
                 data = json.load(rf)
             return data
-        except FileNotFoundError:
+        except Exception as e:
             if DEBUG:
-                print("Databse file not found.")
+                print("Databse file not found. {}".format(e))
             return {}
 
 
@@ -69,7 +73,7 @@ class CatSleep():
         #load the databse file for audio, text and beep sound
         data = self.load_database()
         if DEBUG:
-            print('Databse files: {data}')
+            print("Databse files: {}".format(data))
 
         while True:
             try:
@@ -109,7 +113,7 @@ class CatSleep():
                         if audio_path is not None:
                             self.play_audio(audio_path)
                         else:
-                            self.play_audio("./catsleep/audio/take_break_audio_1.wav")
+                            self.play_audio(DEFAULT_NOTIFY)
                     time.sleep(configs['frequency_interval'])
             except Exception as e:
                 self.util.show_text("Error!", "Something went wrong!")

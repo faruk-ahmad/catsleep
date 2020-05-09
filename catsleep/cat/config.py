@@ -4,17 +4,16 @@ import json
 import sys
 import os
 from os.path import expanduser
-
-sys.path.append('..')
+from pathlib import Path
 
 class Config():
     """ A class for maintaining configurations of catsleep """
 
     def __init__(self):
         """ Initialize all the attributes """
-        path_home = expanduser("~")
-        self.default_config_path = './catsleep/defaults.json'
-        self.user_config_path = os.path.join(path_home, '.catsleep_config.json')
+        self.default_config_path = Path(__file__).parent / "../db/defaults.json"
+        self.path_home = expanduser("~")
+        self.user_config_path = os.path.join(self.path_home, '.catsleep_config.json')
 
     def set_user_config(self, configs):
         """ A method for creating user configuration file """
@@ -27,7 +26,8 @@ class Config():
     def get_user_config(self):
         """ A method to get user defined configurations """
         try:
-            with open(self.user_config_path, 'r') as urf:
+            #built in open in python 3.5 does not support Pathlib like path, so to work in py 3.5 and 3.6 need to convert it into string
+            with open(str(self.user_config_path), 'r') as urf:
                 user_configs = json.load(urf)
             return user_configs
         except Exception as e:
@@ -37,7 +37,7 @@ class Config():
     def get_default_config(self):
         """ A method returning all the default configurations """
         try:
-            with open(self.default_config_path, 'r') as drf:
+            with open(str(self.default_config_path), 'r') as drf:
                 default_configs = json.load(drf)
                 self.set_user_config(default_configs)
             return default_configs

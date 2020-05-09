@@ -4,12 +4,12 @@ import os
 import sys
 
 #sys.path.append('./')
-from catsleep.catsleep import CatSleep
+from catsleep.cat import catsleep as ct
 
 def start_catsleep():
     """ Starting point of catsleep """
 
-    catsp = CatSleep()
+    catsp = ct.CatSleep()
     catsp.catsleep_control()
 
 

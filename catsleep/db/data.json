@@ -6,12 +6,12 @@
         {
             "1":
             {
-                "audio": "./audio/male/take_break_audio_1.wav",
+                "audio": "audio/male/take_break_audio_1.wav",
                 "text": "Hey, You should take a break."
             },
             "2":
             {
-                "audio": "./audio/male/take_break_audio_2.wav",
+                "audio": "audio/male/take_break_audio_2.wav",
                 "text": "Hey, it's been long time, take a break."
             }
         },
@@ -19,20 +19,20 @@
         {
             "1":
             {
-                "audio": "./audio/female/take_break_audio_1.wav",
+                "audio": "audio/female/take_break_audio_1.wav",
                 "text": "Hey, You should take a break."
             },
             "2":
             {
-                "audio": "./audio/female/take_break_audio_2.wav",
+                "audio": "audio/female/take_break_audio_2.wav",
                 "text": "Hey, Have a break and walk for a few minutes."
             }
         }
     },
     "beep":
     {
-        "beep_1": "./beep/take_break_beep_1.ogg",
-        "beep_2": "./beep/take_break_beep_2.wav"
+        "beep_1": "beep/take_break_beep_1.ogg",
+        "beep_2": "beep/take_break_beep_2.wav"
     }
 
 }
