@@ -18,7 +18,7 @@ __catsleep__ is a tool for people working long hours in computer specially, prog
 
 ### 2.1 Install in Linux
 
-#### 2.1.1 Install using the following command-
+* Install using the following command-
 
 ```bash
 git clone https://github.com/faruk-ahmad/catsleep
@@ -26,7 +26,7 @@ cd catsleep
 bash install.sh
 ```
 
-#### 2.1.2 Restart your computer to get it worked.
+* Restart your computer to get it worked.
 
 ### 2.2 Install in MacOS
 
