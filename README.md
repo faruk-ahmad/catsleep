@@ -1,7 +1,7 @@
 # catsleep
-A tool for reminder to take break in between works
+A lightweight tool that reminds user to take break after a certain time period.
 
-## Introduction
+## 1. Introduction
 
 <div style="text-align: justify;">
   
@@ -11,29 +11,79 @@ __catsleep__ is a tool for people working long hours in computer specially, prog
 
 --------------------------------------------------
 
-## Getting Started
+## 2. Installation
 
---------------------------------------------------
+#### 2.1 Install in Linux
 
-## Installation
 ```bash
 git clone https://github.com/faruk-ahmad/catsleep
 cd catsleep
 bash install.sh
 ```
+
+#### 2.2 Install in MacOS
+
+```bash
+git clone https://github.com/faruk-ahmad/catsleep
+cd catsleep
+// you can run the main.py file to run the application
+// installer not available yet
+```
+
+#### 2.3 Install in Windows
+
+```bash
+git clone https://github.com/faruk-ahmad/catsleep
+cd catsleep
+// you can run the main.py file to run the application
+// installer not available yet
+```
+
 --------------------------------------------------
 
-## Configuring your catsleep
+## 3. Configuring your catsleep
+
+The user configuration file resides in the user home directory. It is a hidden file and named as ".catsleep_config.json"
+If you want to change any default behavior like, the interval in between alarms/notifications or want to switch the voice, then you need to edit this configuration file.
+
+Open this file with any text editor and it looks like-
+
+![User Configuration file](./docs/images/catsleep_config.png)
+
+The parameters in the configuration are as follows
+
+|   Parameter   |  Explanation   |  Possible Values | Effect | 
+|:----------|-------------|:------:|-----------|
+| interval | Interval in between alarms/notifications, integer value given as minutes  | 1 to infininte| change the interval in alarms/notification |
+| frequency | Number of consecutive alarms/notifications in a slot  | 1 to infinite | Make multiple consecutive alarms at each alarm |
+| frequency_interval | Gap in minutes in between consecutive alarms at a time  | 1 <= value < interval | make multiple alarms after this given time |
+| play_audio | Trigger On/Off audio message as alarm  | "yes" for on, "no" for off | will turn on/off audio message in notification |
+| show_text | Trigger On/Off text notification as alarm  | "yes" for on, "no" for off | will turn on/off text bubble  in notification |
+| play_beep | Trigger On/Off beep sound as alarm | "yes" for on, "no" for off | will turn on/off beep sound in notification |
+| voice | Switch in between male and female voice mode | "male", "female", "random" | will change the audio message mode |
+
+
+* The notification or alarm works good with all the three [beep, audio & text] on. 
 
 --------------------------------------------------
 
-## ToDo Features
+## 4. Getting Started
+
 --------------------------------------------------
 
-|   Task   |      Status   |  Comment |
-|----------|:-------------:|------:|
-| Linux based console app | Queue  | |
-| User can setup timezone | Queue  | |
-| User can setup time interval | Queue  | |
-| User can pause in case of meeting | Queue  | |
-|  |   | |
+## 5. ToDo Features
+--------------------------------------------------
+
+* User can customize audio messages, text messages and beep sounds
+* Multiple different interval in between alarms
+* Extract task list from linked calender by user and set alarms base on tasks
+* 
+
+## 6. Report Issues
+
+--------------------------------------------------
+
+
+## 7. How to Contribute
+
+--------------------------------------------------
