@@ -1,11 +1,14 @@
 # catsleep
 A lightweight tool that reminds user to take break after a certain time period.
 
+![CatSleep](catsleep.jpg)
+
+
 ## 1. Introduction
 
-<p style="text-align: justify;">
+<p align= "justify">
   
-	**catsleep** is a tool for people working long hours in computer specially, programmers, software engineers and other IT professionals. Sometimes, we are so much engaged in a task that we forget to take break or have a walk that would be very harmfull to our both mental and physical health. So, we initiated this tiny effort for making a tool that would remind the person/user after a certain time to take a break, a refreshment so that s/he can concentrate to their work with a fresh mind and it would help them to keep their mental and physical health sound.
+	__catsleep__ is a tool for people working long hours in computer specially, programmers, software engineers and other IT professionals. Sometimes, we are so much engaged in a task that we forget to take break or have a walk that would be very harmfull to our both mental and physical health. So, we initiated this tiny effort for making a tool that would remind the person/user after a certain time to take a break, a refreshment so that s/he can concentrate to their work with a fresh mind and it would help them to keep their mental and physical health sound.
 
 </p>
 
@@ -13,7 +16,9 @@ A lightweight tool that reminds user to take break after a certain time period.
 
 ## 2. Installation
 
-#### 2.1 Install in Linux
+### 2.1 Install in Linux
+
+#### 2.1.1 Install using the following command-
 
 ```bash
 git clone https://github.com/faruk-ahmad/catsleep
@@ -21,7 +26,9 @@ cd catsleep
 bash install.sh
 ```
 
-#### 2.2 Install in MacOS
+#### 2.1.2 Restart your computer to get it worked.
+
+### 2.2 Install in MacOS
 
 ```bash
 git clone https://github.com/faruk-ahmad/catsleep
@@ -30,7 +37,7 @@ cd catsleep
 // installer not available yet
 ```
 
-#### 2.3 Install in Windows
+### 2.3 Install in Windows
 
 ```bash
 git clone https://github.com/faruk-ahmad/catsleep
@@ -90,8 +97,27 @@ The parameters in the configuration are as follows
 ## 6. Report Issues
 
 --------------------------------------------------
+** Before you report an issue in github, please make sure you are in the same pace with the up to date commit in our github repo. **
 
 
 ## 7. How to Contribute
 
 --------------------------------------------------
+
+You can contribute in the one or either way of the following-
+
+#### 7.1 Bug Reporting
+	-- You can report a bug by adding issue in github
+	-- Or you can contribute by sharing how you solved and issue
+
+#### 7.2 Requesting a Feature
+	-- If you came accross any new idea that can be added as feature
+
+#### 7.3 Adding Feature, Pull Request
+	-- If you come with new idea of a feature and add it
+	-- Send us pull request
+
+#### 7.4 Adding Nofification Resource
+	-- Adding some new cool audio file for notification
+	-- Adding some amazing text message for notification
+	-- Adding some amazing beep sound for notification
