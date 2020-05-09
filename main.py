@@ -3,7 +3,6 @@
 import os
 import sys
 
-#sys.path.append('./')
 from catsleep.cat import catsleep as ct
 
 def start_catsleep():
