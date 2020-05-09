@@ -12,17 +12,17 @@ class Config():
 
     def __init__(self):
         """ Initialize all the attributes """
-        self.cat_base_dir = Path(__file__).parent
-        self.default_config_path = self.cat_base_dir / "../db/defaults.json"
+        self.cat_base_dir = str(Path(__file__).parent)
+        self.default_config_path = os.path.join(self.cat_base_dir, "../db/defaults.json")
         self.path_home = expanduser("~")
         self.user_config_path = os.path.join(self.path_home, '.catsleep_config.json')
         self.path_to_default_notification_audio = '../db/default_notification.ogg'
-        self.db_path = self.cat_base_dir / "../db/data.json"
+        self.db_path = os.path.join(self.cat_base_dir, "../db/data.json")
 
     def set_user_config(self, configs):
         """ A method for creating user configuration file """
         try:
-            shutil.copyfile(self.default_config_path, self.user_config_path)
+            os.popen('cp '+self.default_config_path+' '+self.user_config_path)
         except Exception as e:
             print('Error in writing user configurations.' + str(e))
 
