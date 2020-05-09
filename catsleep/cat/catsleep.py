@@ -117,10 +117,3 @@ class CatSleep():
                     time.sleep(user_conf['frequency_interval'])
             except Exception as e:
                 self.util.show_text("Error!", "Something went wrong!")
-
-
-
-
-if __name__ == '__main__':
-    catsleep = CatSleep()
-    catsleep.catsleep_control()
