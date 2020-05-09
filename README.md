@@ -97,7 +97,7 @@ The parameters in the configuration are as follows
 ## 6. Report Issues
 
 --------------------------------------------------
-** Before you report an issue in github, please make sure you are in the same pace with the up to date commit in our github repo. **
+Before you report an issue in github, please make sure you are in the same pace with the up to date commit in our github repo. 
 
 
 ## 7. How to Contribute
