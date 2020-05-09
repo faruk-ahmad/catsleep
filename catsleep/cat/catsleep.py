@@ -10,7 +10,7 @@ from .utils import Utility
 from .config import Config
 
 DEBUG = True
-DEFAULT_NOTIFY = Path(__file__).parent / "../db/default_notification.ogg"
+DEFAULT_NOTIFY = str(Path(__file__).parent / "../db/default_notification.ogg")
 
 class CatSleep():
     """ A class that represents the basic operation of catsleep """
@@ -22,7 +22,7 @@ class CatSleep():
         self.util = Utility()
         if DEBUG:
             print('Cat Sleep is running.')
-        self.default_audio_path = path = Path(__file__).parent / "../db/default_notification.ogg"
+        self.default_audio_path = Path(__file__).parent / "../db/default_notification.ogg"
 
 
     def play_beep(self, beep_path=DEFAULT_NOTIFY):
