@@ -3,7 +3,6 @@ A lightweight tool that reminds user to take break after a certain time period.
 
 ![CatSleep](catsleep.jpg)
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/faruk-ahmad/catsleep/blob/master/LICENSE)
 
 ## 1. Introduction
 
@@ -19,15 +18,32 @@ __catsleep__ is a tool for people working long hours in computer specially, prog
 
 ### 2.1 Install in Linux
 
+#### 2.1.1 Installation
+
 * Install using the following command-
 
 ```bash
-git clone https://github.com/faruk-ahmad/catsleep
-cd catsleep
-bash install.sh
+	git clone https://github.com/faruk-ahmad/catsleep
+	cd catsleep
+	bash install.sh
 ```
 
 * Restart your computer to get it worked.
+
+#### 2.1.2 Uninstallation
+
+* Uninstall catsleep tool using the following command
+
+```bash
+	#clone the repo if you do not have the previously cloned repo
+
+	git clone https://github.com/faruk-ahmad/catsleep
+	cd catsleep
+	bash uninstall.sh
+```
+
+* Provide "y" if you are prompt for approval to remove some config files.
+* Restart your computer to finish the uninstallation process.
 
 ### 2.2 Install in MacOS
 
