@@ -67,7 +67,7 @@ class CatSleep():
     def catsleep_control(self):
         """ A method to control the interval and frequency of alarm """
         #Show a notification that catsleep is running and will send notification for break
-        time.sleep(3)
+        time.sleep(10)
         self.display_notification("Cat Sleep", "Cat Sleep is running and will send notification to take break.")
 
         #load the databse file for audio, text and beep sound
@@ -87,8 +87,10 @@ class CatSleep():
                 audio_path, beep_path, text_message = self.util.select_beep_audio_text(data, user_conf['voice'])
                 if DEBUG:
                     print('audio path: {} - beep path: {} - text message: {}'.format(audio_path, beep_path, text_message))
+                
                 #wait for certain period before next alarm
-                time.sleep(user_conf['interval'])
+                #user input is in minutes, need to convert in seconds
+                time.sleep(user_conf['interval'] * 60)
 
                 for alarm in range(user_conf['frequency']):
                     #check if beep playing is set as true or not
@@ -114,6 +116,9 @@ class CatSleep():
                             self.play_audio(audio_path)
                         else:
                             self.play_audio(self.default_audio_path)
-                    time.sleep(user_conf['frequency_interval'])
+                    
+                    #gap between two consecutive alarms at a slot
+                    #user input is in minutes, need to convert in seconds
+                    time.sleep(user_conf['frequency_interval'] * 60)
             except Exception as e:
                 self.util.show_text("Error!", "Something went wrong!")
