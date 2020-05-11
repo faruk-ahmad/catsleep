@@ -2,18 +2,29 @@
 
 import os
 import random
+import logging
 from pathlib import Path
 
-DEBUG = True
+logging.basicConfig(
+    format='%(asctime)s - %(message)s',
+    datefmt='%d-%b-%y %H:%M:%S',
+    level=logging.INFO)
 
-
+random.seed(22)
+        
 class Utility():
     """ A class that holds the method for playing audio message and text message """
     def __init__(self):
         self.text_error_title = "Error Occured!"
         self.text_error_message = "Something wrong happened with the text notification!"
         self.path_home = Path(__file__).parent / "../"
-        random.seed(22)
+
+        self.min_voice_id = 1
+        self.max_voice_id = 2
+        self.male_voice_id = 1
+        self.female_voice_id = 2
+
+
 
     def show_text(self, title, message):
         """ A method to display text message as system notification """
@@ -34,8 +45,7 @@ class Utility():
     def select_beep_audio_text(self, data, voice):
         """ A method to select a random beep, audio and respective text transcript of the selected audio """
         try:
-            if DEBUG:
-                print("data is: {}".format(data))
+            logging.debug("data is: {}".format(data))
             messages = data['message']
             beep_data = data['beep']
 
@@ -47,10 +57,10 @@ class Utility():
             beep_path = os.path.join(str(self.path_home), beep_data[beep_temp_path])
 
             if voice.lower() != "male" and voice.lower() != "female":
-                voice_id = random.randint(1, 2)
-                if voice_id == 1:
+                voice_id = random.randint(self.min_voice_id, self.max_voice_id)
+                if voice_id == self.male_voice_id:
                     voice = "male"
-                elif voice_id == 2:
+                elif voice_id == self.female_voice_id:
                     voice = "female"
 
             message = messages[voice]

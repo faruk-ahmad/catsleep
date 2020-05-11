@@ -4,24 +4,27 @@ import os
 import sys
 import time
 import json
+import logging
 from pathlib import Path
 
 from .utils import Utility
 from .config import Config
 
-DEBUG = True
+logging.basicConfig(
+    format='%(asctime)s - %(message)s',
+    datefmt='%d-%b-%y %H:%M:%S',
+    level=logging.INFO)
+
 
 class CatSleep():
     """ A class that represents the basic operation of catsleep """
 
     def __init__(self):
         """ Initialize all the basic attributes required for catsleep """
-        if DEBUG:
-            print('Initializing catsleep ...')
+        logging.info('Initializing catsleep ...')
         self.util = Utility()
         self.conf = Config()
-        if DEBUG:
-            print('Cat Sleep is running.')
+        logging.info('Cat Sleep is running ...')
         self.default_audio_path = str(Path(__file__).parent / self.conf.path_to_default_notification_audio)
 
 
@@ -52,15 +55,13 @@ class CatSleep():
     def load_database(self):
         """ A method to load database files for audio, beep, texts from data.json file """
         database_path = self.conf.db_path
-        if DEBUG:
-            print("database path: {}".format(database_path))
+        logging.debug("database path: {}".format(database_path))
         try:
             with open(str(database_path), 'r') as rf:
                 data = json.load(rf)
             return data
         except Exception as e:
-            if DEBUG:
-                print("Databse file not found. {}".format(e))
+            logging.error("Databse file not found.", exc_info=True)
             return {}
 
 
@@ -72,25 +73,26 @@ class CatSleep():
 
         #load the databse file for audio, text and beep sound
         data = self.load_database()
-        if DEBUG:
-            print("Databse files: {}".format(data))
+        logging.debug("Databse files: {}".format(data))
 
         while True:
             try:
                 # try to get configurations
                 
                 user_conf = self.conf.get_user_config()
-                if DEBUG:
-                    print('voice: {}'.format(user_conf["voice_mode"]))
+                logging.debug('voice: {}'.format(user_conf["voice_mode"]))
 
                 #get selected audio, text and beep for this specifi notification
                 audio_path, beep_path, text_message = self.util.select_beep_audio_text(data, user_conf['voice_mode'])
-                if DEBUG:
-                    print('audio path: {} - beep path: {} - text message: {}'.format(audio_path, beep_path, text_message))
-                
+                logging.info('audio path: {}'.format(audio_path))
+                logging.info('beep path: {}'.format(beep_path))
+                logging.info('text message: `{}`'.format(text_message))
+
                 #wait for certain period before next alarm
                 #user input is in minutes, need to convert in seconds
-                time.sleep(user_conf['interval_minutes'] * 60)
+                sleep_time = user_conf['interval_minutes'] * 60
+                logging.info('going sleep for {} sec ...'.format(sleep_time))
+                time.sleep(sleep_time)
 
                 for alarm in range(user_conf['frequency_number']):
                     #check if beep playing is set as true or not
@@ -119,6 +121,8 @@ class CatSleep():
                     
                     #gap between two consecutive alarms at a slot
                     #user input is in minutes, need to convert in seconds
+                    print('-' * 45)
                     time.sleep(user_conf['frequency_interval_minutes'] * 60)
             except Exception as e:
+                print(e)
                 self.util.show_text("Error!", "Something went wrong!")
