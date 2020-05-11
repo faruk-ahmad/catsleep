@@ -15,13 +15,13 @@ You can configure the interval in between two alarms or notifications by modifyi
 
 ```json
 	{
-		"interval": 30,
-		"frequency": 1,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
@@ -31,13 +31,13 @@ If you want to set the interval as 1 hour instead of default 30 minutes, then ch
 
 ```json
 	{
-		"interval": 60,
-		"frequency": 1,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 60,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
@@ -51,13 +51,13 @@ The frequency of notifications means, how many times you want the alarm to be pl
 
 ```json
 	{
-		"interval": 30,
-		"frequency": 1,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
@@ -67,13 +67,13 @@ If you want to set the frequency 2 instead of default 1 , then change the value 
 
 ```json
 	{
-		"interval": 60,
-		"frequency": 2,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 2,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
@@ -88,29 +88,29 @@ The frequency interval of notifications means, how much gap time you want in bet
 
 ```json
 	{
-		"interval": 30,
-		"frequency": 2,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
-If you want to set the frequency interval 5 instead of default 2 , then change the value in the frequency interval field as bellow-
+If you want to set the frequency interval 5 instead of default 1 , then change the value in the frequency interval field as bellow-
 
 * The alarm will be played twice by a gap of 5 minutes at a slot.
 
 ```json
 	{
-		"interval": 60,
-		"frequency": 2,
-		"frequency_interval": 5,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 5,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
@@ -125,13 +125,13 @@ You can either turn the audio message on or off by modifying configuration file.
 
 ```json
 	{
-		"interval": 30,
-		"frequency": 1,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
@@ -141,13 +141,13 @@ If you want to turn the audio message off, then put "no" in the play_audio field
 
 ```json
 	{
-		"interval": 60,
-		"frequency": 2,
-		"frequency_interval": 2,
-		"play_audio": "no",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "no",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
@@ -163,13 +163,13 @@ You can either turn the text message on or off by modifying configuration file. 
 
 ```json
 	{
-		"interval": 30,
-		"frequency": 1,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
@@ -179,13 +179,13 @@ If you want to turn the text message off, then put "no" in the show_text field.
 
 ```json
 	{
-		"interval": 60,
-		"frequency": 2,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "no",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "no",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
@@ -201,13 +201,13 @@ You can either turn the Beep sound on or off by modifying configuration file. Th
 
 ```json
 	{
-		"interval": 30,
-		"frequency": 1,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
@@ -217,13 +217,13 @@ If you want to turn the Beep sound off, then put "no" in the play_beep field.
 
 ```json
 	{
-		"interval": 60,
-		"frequency": 2,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "no",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "no",
+		"voice_mode": "random"
 	}
 ```
 
@@ -239,13 +239,13 @@ You can choose the mode of voice message to be played. You can choose "male", "f
 
 ```json
 	{
-		"interval": 30,
-		"frequency": 1,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "male"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "male"
 	}
 ```
 
@@ -254,13 +254,13 @@ You can choose the mode of voice message to be played. You can choose "male", "f
 
 ```json
 	{
-		"interval": 30,
-		"frequency": 1,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "female"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "female"
 	}
 ```
 
@@ -268,13 +268,13 @@ You can choose the mode of voice message to be played. You can choose "male", "f
 
 ```json
 	{
-		"interval": 30,
-		"frequency": 1,
-		"frequency_interval": 2,
-		"play_audio": "yes",
-		"show_text": "yes",
-		"play_beep": "yes",
-		"voice": "random"
+		"interval_minutes": 30,
+		"frequency_number": 1,
+		"frequency_interval_minutes": 1,
+		"play_audio_on": "yes",
+		"show_text_on": "yes",
+		"play_beep_on": "yes",
+		"voice_mode": "random"
 	}
 ```
 
