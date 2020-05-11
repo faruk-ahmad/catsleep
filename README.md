@@ -78,13 +78,13 @@ The parameters in the configuration are as follows
 
 |   Parameter   |  Explanation   |  Possible Values | Effect | 
 |:----------|-------------|------|-----------|
-| interval | Interval in between alarms/notifications, integer value given as minutes  | 1 to infininte| change the interval in alarms/notification |
-| frequency | Number of consecutive alarms/notifications in a slot  | 1 to infinite | Make multiple consecutive alarms at each alarm |
-| frequency_interval | Gap in minutes in between consecutive alarms at a time  | 1 <= value < interval | make multiple alarms after this given time |
-| play_audio | Trigger On/Off audio message as alarm  | "yes" for on, "no" for off | will turn on/off audio message in notification |
-| show_text | Trigger On/Off text notification as alarm  | "yes" for on, "no" for off | will turn on/off text bubble  in notification |
-| play_beep | Trigger On/Off beep sound as alarm | "yes" for on, "no" for off | will turn on/off beep sound in notification |
-| voice | Switch in between male and female voice mode | "male", "female", "random" | will change the audio message mode |
+| interval_minutes | Interval in between alarms/notifications, integer value given as minutes  | 1 to infininte| change the interval in alarms/notification |
+| frequency_number | Number of consecutive alarms/notifications in a slot  | 1 to infinite | Make multiple consecutive alarms at each alarm |
+| frequency_interval_minutes | Gap in minutes in between consecutive alarms at a time  | 1 <= value < interval | make multiple alarms after this given time |
+| play_audio_on | Trigger On/Off audio message as alarm  | "yes" for on, "no" for off | will turn on/off audio message in notification |
+| show_text_on | Trigger On/Off text notification as alarm  | "yes" for on, "no" for off | will turn on/off text bubble  in notification |
+| play_beep_on | Trigger On/Off beep sound as alarm | "yes" for on, "no" for off | will turn on/off beep sound in notification |
+| voice_mode | Switch in between male and female voice mode | "male", "female", "random" | will change the audio message mode |
 
 
 * The notification or alarm works good with all the three [beep, audio & text] on. 
