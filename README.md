@@ -9,7 +9,6 @@ A lightweight tool that reminds user to take break after a certain time period.
 <p align= "justify">
   
 __catsleep__ is a tool for people working long hours in computer specially, programmers, software engineers and other IT professionals. Sometimes, we are so much engaged in a task that we forget to take break or have a walk that would be very harmfull to our both mental and physical health. So, we initiated this tiny effort for making a tool that would remind the person/user after a certain time to take a break, a refreshment so that s/he can concentrate to their work with a fresh mind and it would help them to keep their mental and physical health sound.
-q
 </p>
 
 --------------------------------------------------
@@ -23,9 +22,9 @@ q
 * Install using the following command-
 
 ```bash
-	git clone https://github.com/faruk-ahmad/catsleep
-	cd catsleep
-	bash install.sh
+git clone https://github.com/faruk-ahmad/catsleep
+cd catsleep
+bash install.sh
 ```
 
 * Restart your computer to get it worked.
@@ -35,11 +34,11 @@ q
 * Uninstall catsleep tool using the following command
 
 ```bash
-	#clone the repo if you do not have the previously cloned repo
+# clone the repo if you do not have the previously cloned repo
 
-	git clone https://github.com/faruk-ahmad/catsleep
-	cd catsleep
-	bash uninstall.sh
+git clone https://github.com/faruk-ahmad/catsleep
+cd catsleep
+bash uninstall.sh
 ```
 
 * Provide "y" if you are prompt for approval to remove some config files.
@@ -50,8 +49,8 @@ q
 ```bash
 git clone https://github.com/faruk-ahmad/catsleep
 cd catsleep
-// you can run the main.py file to run the application
-// installer not available yet
+# you can run the main.py file to run the application
+# installer not available yet
 ```
 
 ### 2.3 Install in Windows
@@ -59,8 +58,8 @@ cd catsleep
 ```bash
 git clone https://github.com/faruk-ahmad/catsleep
 cd catsleep
-// you can run the main.py file to run the application
-// installer not available yet
+# you can run the main.py file to run the application
+# installer not available yet
 ```
 
 --------------------------------------------------
@@ -111,7 +110,6 @@ The parameters in the configuration are as follows
 * User can customize audio messages, text messages and beep sounds
 * Multiple different interval in between alarms
 * Extract task list from linked calender by user and set alarms base on tasks
-* 
 
 ## 6. Report Issues
 
