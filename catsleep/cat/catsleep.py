@@ -81,21 +81,21 @@ class CatSleep():
                 
                 user_conf = self.conf.get_user_config()
                 if DEBUG:
-                    print('voice: {}'.format(user_conf["voice"]))
+                    print('voice: {}'.format(user_conf["voice_mode"]))
 
                 #get selected audio, text and beep for this specifi notification
-                audio_path, beep_path, text_message = self.util.select_beep_audio_text(data, user_conf['voice'])
+                audio_path, beep_path, text_message = self.util.select_beep_audio_text(data, user_conf['voice_mode'])
                 if DEBUG:
                     print('audio path: {} - beep path: {} - text message: {}'.format(audio_path, beep_path, text_message))
                 
                 #wait for certain period before next alarm
                 #user input is in minutes, need to convert in seconds
-                time.sleep(user_conf['interval'] * 60)
+                time.sleep(user_conf['interval_minutes'] * 60)
 
-                for alarm in range(user_conf['frequency']):
+                for alarm in range(user_conf['frequency_number']):
                     #check if beep playing is set as true or not
                     #first play a beep sound, different beep at different time, need to make dynamic
-                    if user_conf['play_beep'].lower() == "yes":
+                    if user_conf['play_beep_on'].lower() == "yes":
                         if beep_path:
                             self.play_beep(beep_path)
                         else:
@@ -103,7 +103,7 @@ class CatSleep():
                     
                     #check if showing text is set as true or not
                     #then display the text notification, different text at different time, need to make dynamic
-                    if user_conf['show_text'].lower() == "yes":
+                    if user_conf['show_text_on'].lower() == "yes":
                         if text_message:
                             self.display_notification("Take Break!", text_message)
                         else:
@@ -111,7 +111,7 @@ class CatSleep():
                     
                     #check if playing audio message is set as true or not
                     #then play a voice message, different message at different time, need to make dynamic
-                    if user_conf['play_audio'].lower() == "yes":
+                    if user_conf['play_audio_on'].lower() == "yes":
                         if audio_path:
                             self.play_audio(audio_path)
                         else:
@@ -119,6 +119,6 @@ class CatSleep():
                     
                     #gap between two consecutive alarms at a slot
                     #user input is in minutes, need to convert in seconds
-                    time.sleep(user_conf['frequency_interval'] * 60)
+                    time.sleep(user_conf['frequency_interval_minutes'] * 60)
             except Exception as e:
                 self.util.show_text("Error!", "Something went wrong!")

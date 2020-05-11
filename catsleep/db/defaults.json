@@ -1,9 +1,9 @@
 {
-    "interval": 30,
-    "frequency": 1,
-    "frequency_interval": 1,
-    "play_audio": "yes",
-    "show_text": "yes",
-    "play_beep": "yes",
-    "voice": "random"
+    "interval_minutes": 30,
+    "frequency_number": 1,
+    "frequency_interval_minutes": 1,
+    "play_audio_on": "yes",
+    "show_text_on": "yes",
+    "play_beep_on": "yes",
+    "voice_mode": "random"
 }
