@@ -3,6 +3,7 @@ A lightweight tool that reminds user to take break after a certain time period.
 
 ![CatSleep](catsleep.jpg)
 
+[CatSleep image source: personalitycafe](https://www.personalitycafe.com/intp-forum-thinkers/872242-these-cats-your-sleeping-position-5.html)
 
 ## 1. Introduction
 
