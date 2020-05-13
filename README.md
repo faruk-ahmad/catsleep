@@ -46,8 +46,7 @@ bash uninstall.sh
 
 ```bash
 git clone https://github.com/faruk-ahmad/catsleep
-cd catsleep
-# you can run the main.py file to run the application
+# you can run the catsleep/main.py file to run the application
 # installer not available yet
 ```
 
@@ -55,8 +54,7 @@ cd catsleep
 
 ```bash
 git clone https://github.com/faruk-ahmad/catsleep
-cd catsleep
-# you can run the main.py file to run the application
+# you can run the catsleep/main.py file to run the application
 # installer not available yet
 ```
 
@@ -64,7 +62,7 @@ cd catsleep
 
 ## 3. Configuring your catsleep
 
-The user configuration file resides in the user home directory. It is a hidden file and named as `.catsleep_config.json`
+The user configuration file resides in the user home directory if you are using linux based OS like ubuntu. It is a hidden file and named as `.catsleep_config.json`
 If you want to change any default behavior like, the interval in between alarms/notifications or want to switch the voice, then you need to edit this configuration file.
 
 Open this file with any text editor and it looks like-
